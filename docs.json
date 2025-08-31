@@ -1,32 +1,35 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "WikiChat Documentation",
+  "appearance": {
+    "default": "light",
+    "strict": true
+  },
+  "background": {
+    "color": {
+      "light": "#f7f7f7",
+      "dark": "#000000"
+    }
+  },
+  "name": "WikiChat Documentación",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373"
+    "primary": "#0057ff",
+    "light": "#0057ff",
+    "dark": "#0057ff"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentación",
         "groups": [
           {
             "group": "Getting started",
-            "pages": [
-              "introduction",
-              "quickstart",
-              "development"
-            ]
+            "pages": ["introduction", "quickstart", "development"]
           },
           {
             "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
+            "pages": ["essentials/settings", "essentials/navigation"]
           },
           {
             "group": "Writing content",
@@ -46,42 +49,22 @@
             ]
           }
         ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
+          "anchor": "Tutoriales",
           "href": "https://mintlify.com/docs",
           "icon": "book-open-cover"
         },
         {
-          "anchor": "Community",
+          "anchor": "Comunidad",
           "href": "https://mintlify.com/community",
           "icon": "slack"
         },
         {
-          "anchor": "Blog",
+          "anchor": "Cursos",
           "href": "https://mintlify.com/blog",
           "icon": "newspaper"
         }
@@ -89,39 +72,37 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
+    "light": "/logo/white.png",
     "dark": "/logo/dark.svg"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
+        "label": "Iniciar sesión",
         "href": "mailto:support@wikichat.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
+      "label": "Escritorio",
       "href": "https://dashboard.wikichat.com"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/wikichat",
-      "github": "https://github.com/wikichat",
-      "linkedin": "https://linkedin.com/company/wikichat"
+      "instagram": "https://instagram.com/wikichatio"
     }
   }
 }
