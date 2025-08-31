@@ -1,0 +1,13 @@
+{
+  "name": "wikichat-docs",
+  "version": "1.0.0",
+  "description": "WikiChat Documentation",
+  "scripts": {
+    "dev": "mintlify dev",
+    "build": "mintlify build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mintlify": "^4.0.0"
+  }
+}

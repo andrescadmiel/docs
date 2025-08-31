@@ -1,0 +1,98 @@
+---
+title: 'API Introduction'
+description: 'Learn how to use the WikiChat API'
+---
+
+## Welcome
+
+The WikiChat API allows you to integrate our powerful chat functionality into your applications. Our REST API is designed to be simple, predictable, and easy to use.
+
+## Base URL
+
+All API requests should be made to:
+
+```
+https://api.wikichat.com/v1
+```
+
+## Authentication
+
+WikiChat uses API keys to authenticate requests. You can view and manage your API keys in the [Dashboard](https://dashboard.wikichat.com).
+
+Include your API key in the Authorization header:
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+  https://api.wikichat.com/v1/chats
+```
+
+<Warning>
+Keep your API keys secure and never share them publicly. Use environment variables to store them safely.
+</Warning>
+
+## Rate Limiting
+
+The API is rate limited to ensure fair usage:
+
+- **Free Plan**: 100 requests per minute
+- **Pro Plan**: 1,000 requests per minute
+- **Enterprise**: Custom limits
+
+Rate limit information is included in response headers:
+
+```
+X-RateLimit-Limit: 1000
+X-RateLimit-Remaining: 999
+X-RateLimit-Reset: 1640995200
+```
+
+## Error Handling
+
+The API uses conventional HTTP response codes to indicate success or failure:
+
+| Status Code | Description |
+|-------------|-------------|
+| 200 | Success |
+| 400 | Bad Request - Invalid parameters |
+| 401 | Unauthorized - Invalid API key |
+| 403 | Forbidden - Insufficient permissions |
+| 404 | Not Found - Resource doesn't exist |
+| 429 | Too Many Requests - Rate limit exceeded |
+| 500 | Internal Server Error |
+
+Error responses include a JSON object with more details:
+
+```json
+{
+  "error": {
+    "code": "invalid_request",
+    "message": "The request is missing required parameters",
+    "details": {
+      "missing_fields": ["name", "email"]
+    }
+  }
+}
+```
+
+## SDKs and Libraries
+
+Official SDKs are available for popular programming languages:
+
+<CardGroup cols={2}>
+  <Card title="JavaScript/Node.js" icon="js" href="/sdks/javascript">
+    Full-featured SDK for JavaScript and Node.js
+  </Card>
+  <Card title="Python" icon="python" href="/sdks/python">
+    Python SDK with asyncio support
+  </Card>
+  <Card title="PHP" icon="php" href="/sdks/php">
+    PHP SDK with Composer support
+  </Card>
+  <Card title="Go" icon="golang" href="/sdks/go">
+    Go SDK with full type safety
+  </Card>
+</CardGroup>
+
+## Getting Started
+
+Ready to start building? Check out our [Quickstart Guide](/quickstart) or explore the API endpoints below.
