@@ -24,33 +24,35 @@ Para previsualizar los cambios localmente:
 npm run dev
 ```
 
-La documentación estará disponible en `http://localhost:3000`.
-
-### Construcción
-
-Para construir la documentación:
+También puedes usar el CLI de Mintlify directamente:
 
 ```bash
-npm run build
+npm i -g mint
+mint dev
 ```
+
+La documentación estará disponible en `http://localhost:3000`.
 
 ## Estructura del Proyecto
 
 ```
-├── mint.json                 # Configuración principal de Mintlify
-├── introduction.mdx          # Página de introducción
-├── quickstart.mdx           # Guía de inicio rápido
-├── development.mdx          # Guía de desarrollo
-├── essentials/              # Documentación esencial
+├── docs.json                # Configuración principal de Mintlify
+├── introduction.mdx         # Página de introducción
+├── quickstart.mdx          # Guía de inicio rápido
+├── development.mdx         # Guía de desarrollo
+├── essentials/             # Documentación esencial
 │   ├── markdown.mdx
-│   └── code.mdx
-├── api-reference/           # Referencia de la API
+│   ├── code.mdx
+│   ├── settings.mdx
+│   └── navigation.mdx
+├── api-reference/          # Referencia de la API
 │   ├── introduction.mdx
 │   └── endpoint/
 │       ├── get.mdx
-│       └── create.mdx
-├── images/                  # Imágenes y assets
-├── logo/                    # Logos (claro y oscuro)
+│       ├── create.mdx
+│       └── delete.mdx
+├── images/                 # Imágenes y assets
+├── logo/                   # Logos (claro y oscuro)
 └── package.json
 ```
 
@@ -58,7 +60,7 @@ npm run build
 
 ### Colores
 
-Los colores del tema están definidos en `mint.json`:
+Los colores del tema están definidos en `docs.json`:
 
 ```json
 {
@@ -84,7 +86,7 @@ El favicon está en la raíz del proyecto como `favicon.svg`.
 
 Para desplegar la documentación:
 
-1. Conecta el repositorio con Mintlify
+1. Instala la app de GitHub desde tu [dashboard](https://dashboard.mintlify.com/settings/organization/github-app)
 2. Los cambios se desplegarán automáticamente cuando hagas push a main/master
 
 ## Contribuir
@@ -94,3 +96,8 @@ Para desplegar la documentación:
 3. Commit tus cambios (`git commit -m 'Agregar nueva característica'`)
 4. Push a la rama (`git push origin feature/nueva-caracteristica`)
 5. Abre un Pull Request
+
+## Recursos
+
+- [Mintlify documentation](https://mintlify.com/docs)
+- [Mintlify community](https://mintlify.com/community)
